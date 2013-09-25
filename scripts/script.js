@@ -1,3 +1,4 @@
-function addXO(id){
-	id.innerHTML = "X"
+function addXO(element){
+	//console.log(element)
+	element.innerHTML = "X"
 }
