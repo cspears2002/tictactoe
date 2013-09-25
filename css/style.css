@@ -1,0 +1,28 @@
+.container {
+  width: 918px;
+  heigh: 918px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+  background: white;
+  display: inline;
+  float: left;
+}
+
+.row_1 {
+  width: 306px;
+  height: 102px;
+}
+
+.row_2 {
+  width: 306px;
+  height: 102px;
+}
+
+.row_3 {
+  width: 306px;
+  height: 102px;
+}
