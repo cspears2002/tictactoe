@@ -15,7 +15,6 @@
 #reset_button {
   width: 100px;
   height: 50px;
-  border: 1px solid black;
   margin-bottom: 10px;
   background-color: green;
 }
@@ -60,6 +59,8 @@
   background: white;
   display: inline;
   float: left;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .row_1 {
