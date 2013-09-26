@@ -11,5 +11,6 @@ function addXO(element){
 }
 
 function resetGame(element){
-	element.target.backgroundColor = "FF0000";
+	console.log(element)
+	//reset.style.background = "FF0000";
 }
