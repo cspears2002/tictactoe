@@ -17,9 +17,11 @@ function resetGame(element){
 function navCells() {
 	for (var c = 1; c <= 3 ; ++c)
 	{
-		for(var r= 0; r < 3; ++r) {
+		for(var r= 1; r <= 3; ++r) 
+		{
 			var div_id = "box" + c + "_" + r;
-			alert(document.getElementById(div_id));
-		};
+			console.log(div_id)
+			alert(document.getElementById(div_id).innerHTML);
+		}
 	}
 }

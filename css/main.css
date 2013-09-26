@@ -161,6 +161,8 @@ textarea {
   font-family: Arial, sans-serif;
   font-size: 50px;
   text-align: center;
+  vertical-align: center;
+  line-height: 100px;
 }
 
 .row_1 {
