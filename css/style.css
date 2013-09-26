@@ -1,6 +1,37 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.radio_container {
+  width: 306px;
+  font-family: Arial, sans-serif;
+}
+
+.label_player_2 {
+  float: right;
+}
+
+.input_player_2 {
+  float: right;
+}
+
+.player_1_radio {
+  width: 153px;
+  float: left;
+}
+
+.player_2_radio {
+  width: 153px;
+  float: right;
+}
+
 .container {
-  width: 918px;
-  heigh: 918px;
+  width: 306px;
+  heigh: 328px;
 }
 
 .box {
@@ -13,6 +44,7 @@
 }
 
 .row_1 {
+  margin-top: 10px;
   width: 306px;
   height: 102px;
 }
