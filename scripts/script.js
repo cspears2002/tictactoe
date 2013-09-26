@@ -11,6 +11,15 @@ function addXO(element){
 }
 
 function resetGame(element){
-	console.log(element)
-	//reset.style.background = "FF0000";
+	element.style.background = '#ff0000';
+}
+
+function navCells() {
+	for (var c = 1; c <= 3 ; ++c)
+	{
+		for(var r= 0; r < 3; ++r) {
+			var div_id = "box" + c + "_" + r;
+			alert(document.getElementById(div_id));
+		};
+	}
 }
