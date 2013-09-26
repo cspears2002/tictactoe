@@ -6,7 +6,24 @@
   visibility: hidden;
 }
 
+/* -----Reset button----- */
+
+.restart {
+  height: 50px;
+}
+
+#reset_button {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  background-color: green;
+}
+
+/* -----Radio Buttons----- */
+
 .radio_container {
+  margin-top: 10px;
   width: 306px;
   font-family: Arial, sans-serif;
 }
@@ -28,6 +45,8 @@
   width: 153px;
   float: right;
 }
+
+/* -----Game board----- */
 
 .container {
   width: 306px;
