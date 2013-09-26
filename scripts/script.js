@@ -1,11 +1,11 @@
 function addXO(element){
 	//console.log(element)
-	var radios = document.getElementsByName('player');
+	var rd_plyer_1 = document.getElementById('player_1');
+	var rd_plyer_2 = document.getElementById('player_2');
 
-	if (radios.value == "player_1")
+	if (rd_plyer_1.checked)
 		element.innerHTML = "X";
-	else if (radios.value = "player_2")
+
+	if (rd_plyer_2.checked)
 		element.innerHTML = "O";
-	else
-		element.innerHTML = "There can only be one.";
 }
