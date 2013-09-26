@@ -9,3 +9,7 @@ function addXO(element){
 	if (rd_plyer_2.checked && element.innerHTML != "X")
 		element.innerHTML = "O";
 }
+
+function resetGame(element){
+	element.target.backgroundColor = "FF0000";
+}
