@@ -105,6 +105,15 @@ textarea {
   visibility: hidden;
 }
 
+/* -----Super container----- */
+
+.super_container {
+  height: 400px;
+  width: 306px;
+  margin: auto;
+  float: center;
+}
+
 /* -----Reset button----- */
 
 .restart {
@@ -116,10 +125,6 @@ textarea {
   height: 50px;
   margin-bottom: 10px;
   background-color: green;
-}
-
-.super_container {
-  float: center;
 }
 
 /* -----Radio Buttons----- */
