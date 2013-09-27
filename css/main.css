@@ -155,7 +155,7 @@ textarea {
   float: right;
 }
 
-/* -----Game board----- */
+/* -----Win Notification----- */
 
 .win_notification {
   width: 70%;
@@ -163,11 +163,26 @@ textarea {
   margin: 0 auto;
   top: 41px;
   left: 45.9px;
-  background-color: #888888;
+  background-color: #666666;
   position: absolute;
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
+.win_buttons_labels {
+  margin: 50px;
+  color: white;
+}
+
+.yes_button {
+  margin: 5px;
+}
+
+.no_button {
+  margin: 5px;
+}
+
+/* -----Game board----- */
 
 .container {
   width: 306px;
