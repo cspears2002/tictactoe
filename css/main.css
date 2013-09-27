@@ -136,18 +136,9 @@ textarea {
   font-family: Arial, sans-serif;
 }
 
-/*
-.label_player_2 {
-  position: absolute;
-  left: 94px;
+.player_2_inner {
+  float: right;
 }
-
-.input_player_2 {
-  position: absolute;
-  top: 3.5px;
-  left: 80px;
-}
-*/
 
 .player_1_radio {
   width: 153px;
@@ -158,7 +149,6 @@ textarea {
   width: 153px;
   height: 22px;
   float: right;
-  position: relative;
 }
 
 /* -----Win Notification----- */
