@@ -1,5 +1,7 @@
 function resetGame(element){
 	element.style.background = '#ff0000';
+
+	document.getElementById("win_popup").style.display = "block";
 }
 
 function addXO(element){

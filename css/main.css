@@ -126,6 +126,7 @@ textarea {
   height: 50px;
   margin-bottom: 10px;
   background-color: green;
+  opacity: 0.8;
 }
 
 /* -----Radio Buttons----- */
@@ -164,6 +165,7 @@ textarea {
   font-family: Arial, sans-serif;
   text-align: center;
   opacity: 0.8;
+  display: none;
 }
 
 .win_buttons_labels {
