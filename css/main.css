@@ -118,6 +118,10 @@ textarea {
   background-color: green;
 }
 
+.super_container {
+  float: center;
+}
+
 /* -----Radio Buttons----- */
 
 .radio_container {
