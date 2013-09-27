@@ -110,7 +110,7 @@ textarea {
 .super_container {
   height: 400px;
   width: 306px;
-  margin: auto;
+  margin: 0 auto;
   float: center;
   margin-top: 15px;
 }
@@ -157,9 +157,22 @@ textarea {
 
 /* -----Game board----- */
 
+.win_notification {
+  width: 70%;
+  height: 230px;
+  margin: 0 auto;
+  top: 41px;
+  left: 45.9px;
+  background-color: #888888;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 .container {
   width: 306px;
-  heigh: 328px;
+  height: 328px;
+  position: relative;
 }
 
 .box {
