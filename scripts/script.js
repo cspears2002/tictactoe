@@ -29,20 +29,23 @@ function changeSquaresOnClick() {
 
 	// Test columns.
 	for(var c = 1; c <= 3; ++c)
+	{
 		if(cellArray[0][c-1] == cellArray[1][c-1]  && 
 		   cellArray[1][c-1] == cellArray[2][c-1]  && 
 		   cellArray[0][c-1] != "")
 		{
 			alert(cellArray[0][c-1] + " won in row " + c);
 		}
+	}
 
 	// Test rows.
 	for(var r = 1; r <= 3; ++r)
+	{
 		if(cellArray[r-1][0] == cellArray[r-1][1]  && 
 		   cellArray[r-1][1] == cellArray[r-1][2]  && 
 		   cellArray[r-1][0] != "")
 		{
 			alert(cellArray[r-1][0] + " won in row " + r);
 		}
-	
+	}
 }
