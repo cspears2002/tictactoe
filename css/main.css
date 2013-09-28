@@ -154,7 +154,7 @@ textarea {
 
 /* -----Win Notification----- */
 
-.win_notification {
+.reset_notification {
   width: 70%;
   height: 230px;
   margin: 0 auto;
@@ -168,7 +168,7 @@ textarea {
   display: none;
 }
 
-.win_buttons_labels {
+.reset_buttons_labels {
   margin: 50px;
   color: white;
 }
@@ -179,6 +179,21 @@ textarea {
 
 .no_button {
   margin: 5px;
+}
+
+.win_notification {
+  width: 70%;
+  height: 230px;
+  margin: 0 auto;
+  top: 41px;
+  left: 45.9px;
+  color: white;
+  background-color: #666666;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  opacity: 0.8;
+  display: none;
 }
 
 /* -----Game board----- */
@@ -218,8 +233,6 @@ textarea {
   width: 306px;
   height: 102px;
 }
-
-
 
 
 

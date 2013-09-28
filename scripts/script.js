@@ -1,7 +1,7 @@
 function resetGame(element){
 	element.style.background = '#ff0000';
 
-	document.getElementById("win_popup").style.display = "block";
+	document.getElementById("reset_popup").style.display = "block";
 }
 
 function addXO(element){
@@ -31,6 +31,8 @@ function identifyWin() {
 		}
 	}
 
+	win_popup = document.getElementById("win_popup");
+
 	// Test columns.
 	for(var c = 1; c <= 3; ++c)
 	{
@@ -38,7 +40,8 @@ function identifyWin() {
 		   cellArray[1][c-1] == cellArray[2][c-1]  && 
 		   cellArray[0][c-1] != "")
 		{
-			alert(cellArray[0][c-1] + " won in column " + c);
+			win_popup.innerHTML = cellArray[0][c-1] + " won in column " + c;
+			win_popup.style.display = "block";
 		}
 	}
 
@@ -49,7 +52,8 @@ function identifyWin() {
 		   cellArray[r-1][1] == cellArray[r-1][2]  && 
 		   cellArray[r-1][0] != "")
 		{
-			alert(cellArray[r-1][0] + " won in row " + r);
+			win_popup.innerHTML = cellArray[r-1][0] + " won in row " + r;
+			win_popup.style.display = "block";
 		}
 	}
 }
