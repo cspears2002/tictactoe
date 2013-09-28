@@ -43,7 +43,7 @@ function identifyWin() {
 	// Test columns.
 	rd_plyer_1 = document.getElementById('player_1');
 	rd_plyer_2 = document.getElementById('player_2');
-	
+
 	for(var c = 1; c <= 3; ++c)
 	{
 		if(cellArray[0][c-1] == cellArray[1][c-1]  && 
@@ -52,7 +52,9 @@ function identifyWin() {
 		{
 			if (rd_plyer_1.checked) 
 			{
-				rd_plyer_1.style.background = "red";
+				var player_1_container = document.getElementsByClassName('player_1_radio');
+				console.log(typeof player_1_container)
+				player_1_container.style.background = "red";
 
 			}
 		}
