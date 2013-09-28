@@ -1,20 +1,29 @@
+var rd_plyer_1;
+var rd_plyer_2;
+
+function pageLoaded() {
+	var boxes = document.getElementsByClassName("box");
+	for (var i = 0; i < boxes.length; i++) {
+		boxes[i].onclick = addXO;
+	};
+}
+
 function resetGame(element){
 	element.style.background = '#ff0000';
 
 	document.getElementById("reset_popup").style.display = "block";
 }
 
-function addXO(element){
-	console.log("hello world" + element);
-	
-	var rd_plyer_1 = document.getElementById('player_1');
-	var rd_plyer_2 = document.getElementById('player_2');
+function addXO(){
 
-	if (rd_plyer_1.checked && element.innerHTML != "O")
-		element.innerHTML = "X";
+	rd_plyer_1 = document.getElementById('player_1');
+	rd_plyer_2 = document.getElementById('player_2');
 
-	if (rd_plyer_2.checked && element.innerHTML != "X")
-		element.innerHTML = "O";
+	if (rd_plyer_1.checked && event.target.innerHTML != "O")
+		event.target.innerHTML = "X";
+
+	if (rd_plyer_2.checked && event.target.innerHTML != "X")
+		event.target.innerHTML = "O";
 
 	identifyWin();
 }
@@ -31,17 +40,21 @@ function identifyWin() {
 		}
 	}
 
-	win_popup = document.getElementById("win_popup");
-
 	// Test columns.
+	rd_plyer_1 = document.getElementById('player_1');
+	rd_plyer_2 = document.getElementById('player_2');
+	
 	for(var c = 1; c <= 3; ++c)
 	{
 		if(cellArray[0][c-1] == cellArray[1][c-1]  && 
 		   cellArray[1][c-1] == cellArray[2][c-1]  && 
 		   cellArray[0][c-1] != "")
 		{
-			win_popup.innerHTML = cellArray[0][c-1] + " won in column " + c;
-			win_popup.style.display = "block";
+			if (rd_plyer_1.checked) 
+			{
+				rd_plyer_1.style.background = "red";
+
+			}
 		}
 	}
 
