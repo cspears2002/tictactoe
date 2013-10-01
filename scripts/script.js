@@ -1,7 +1,9 @@
+'use strict;'
+
 var rd_plyer_1;
 var rd_plyer_2;
 
-function pageLoaded() {
+function attachFunction() {
 	var boxes = document.getElementsByClassName("box");
 	for (var i = 0; i < boxes.length; i++) {
 		boxes[i].onclick = addXO;
@@ -36,27 +38,31 @@ function identifyWin() {
 		{
 			var div_id = "box" + r + "_" + c;
 			cellArray[r-1][c-1] = document.getElementById(div_id).innerHTML;
-			//document.getElementById(div_id).onclick = addXO(div_id);
 		}
 	}
 
-	// Test columns.
-	rd_plyer_1 = document.getElementById('player_1');
-	rd_plyer_2 = document.getElementById('player_2');
+	console.log(cellArray);
 
+	// Test diagonals
+	if (cellArray[1][1] != "") {
+		if ((cellArray[0][0] == cellArray[1][1] &&
+			 cellArray[1][1] == cellArray[2][2]) ||
+			(cellArray[0][2] == cellArray[1][1] &&
+			 cellArray[1][1] == cellArray[2][0])) {
+				win_popup.innerHTML = cellArray[1][1] + " won.";
+				win_popup.style.display = "block";
+			}
+	}
+
+	// Test columns.
 	for(var c = 1; c <= 3; ++c)
 	{
 		if(cellArray[0][c-1] == cellArray[1][c-1]  && 
 		   cellArray[1][c-1] == cellArray[2][c-1]  && 
 		   cellArray[0][c-1] != "")
 		{
-			if (rd_plyer_1.checked) 
-			{
-				var player_1_container = document.getElementsByClassName('player_1_radio');
-				console.log(typeof player_1_container)
-				player_1_container.style.background = "red";
-
-			}
+			win_popup.innerHTML = cellArray[0][c-1] + " won in column " + c;
+			win_popup.style.display = "block";
 		}
 	}
 
