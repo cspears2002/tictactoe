@@ -1,8 +1,5 @@
 'use strict;'
 
-var rd_plyer_1;
-var rd_plyer_2;
-
 function attachFunction() {
 	var boxes = document.getElementsByClassName("box");
 	for (var i = 0; i < boxes.length; i++) {
@@ -18,8 +15,8 @@ function resetGame(element){
 
 function addXO(){
 
-	rd_plyer_1 = document.getElementById('player_1');
-	rd_plyer_2 = document.getElementById('player_2');
+	var rd_plyer_1 = document.getElementById('player_1');
+	var rd_plyer_2 = document.getElementById('player_2');
 
 	if (rd_plyer_1.checked && event.target.innerHTML != "O")
 		event.target.innerHTML = "X";
@@ -27,10 +24,10 @@ function addXO(){
 	if (rd_plyer_2.checked && event.target.innerHTML != "X")
 		event.target.innerHTML = "O";
 
-	identifyWin();
+	identifyWin(rd_plyer_1, rd_plyer_2);
 }
 
-function identifyWin() {
+function identifyWin(rd_button_1, rd_button_2) {
 	var cellArray = [["","",""],["","",""],["","",""]];
 	for (var r = 1; r <= 3 ; ++r)
 	{
@@ -41,7 +38,8 @@ function identifyWin() {
 		}
 	}
 
-	console.log(cellArray);
+	radio_container_1 = document.getElementsByClassName("player_1_radio")[0];
+	radio_container_2 = document.getElementsByClassName("player_2_radio")[0];
 
 	// Test diagonals
 	if (cellArray[1][1] != "") {
@@ -49,9 +47,13 @@ function identifyWin() {
 			 cellArray[1][1] == cellArray[2][2]) ||
 			(cellArray[0][2] == cellArray[1][1] &&
 			 cellArray[1][1] == cellArray[2][0])) {
-				win_popup.innerHTML = cellArray[1][1] + " won.";
-				win_popup.style.display = "block";
-			}
+				// win_popup.innerHTML = cellArray[1][1] + " won.";
+				// win_popup.style.display = "block";
+				if (rd_button_1.checked) {
+					console.log("Turn red")
+					radio_container_1.style.backgroundColor = '#ff0000';
+				}
+		}
 	}
 
 	// Test columns.
