@@ -36,11 +36,11 @@ function changeBgClr() {
 	radio_container_2 = document.getElementsByClassName("player_2_radio")[0];
 
 	if (rd_plyer_1.checked) {
-		radio_container_1.style.backgroundColor = '#ffff00';
+		radio_container_1.style.backgroundColor = '#ffff11';
 	}
 
 	if (rd_plyer_2.checked) {
-		radio_container_2.style.backgroundColor = '#ffff00';
+		radio_container_2.style.backgroundColor = '#ffff11';
 	}
 }
 
