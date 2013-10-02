@@ -27,7 +27,24 @@ function addXO(){
 	identifyWin(rd_plyer_1, rd_plyer_2);
 }
 
-function identifyWin(rd_button_1, rd_button_2) {
+function changeBgClr() {
+
+	var rd_plyer_1 = document.getElementById('player_1');
+	var rd_plyer_2 = document.getElementById('player_2');
+
+	radio_container_1 = document.getElementsByClassName("player_1_radio")[0];
+	radio_container_2 = document.getElementsByClassName("player_2_radio")[0];
+
+	if (rd_plyer_1.checked) {
+		radio_container_1.style.backgroundColor = '#ffff00';
+	}
+
+	if (rd_plyer_2.checked) {
+		radio_container_2.style.backgroundColor = '#ffff00';
+	}
+}
+
+function identifyWin() {
 	var cellArray = [["","",""],["","",""],["","",""]];
 	for (var r = 1; r <= 3 ; ++r)
 	{
@@ -38,21 +55,14 @@ function identifyWin(rd_button_1, rd_button_2) {
 		}
 	}
 
-	radio_container_1 = document.getElementsByClassName("player_1_radio")[0];
-	radio_container_2 = document.getElementsByClassName("player_2_radio")[0];
-
 	// Test diagonals
 	if (cellArray[1][1] != "") {
 		if ((cellArray[0][0] == cellArray[1][1] &&
 			 cellArray[1][1] == cellArray[2][2]) ||
 			(cellArray[0][2] == cellArray[1][1] &&
-			 cellArray[1][1] == cellArray[2][0])) {
-				// win_popup.innerHTML = cellArray[1][1] + " won.";
-				// win_popup.style.display = "block";
-				if (rd_button_1.checked) {
-					console.log("Turn red")
-					radio_container_1.style.backgroundColor = '#ff0000';
-				}
+			 cellArray[1][1] == cellArray[2][0])) 
+		{
+			changeBgClr();		
 		}
 	}
 
@@ -63,8 +73,7 @@ function identifyWin(rd_button_1, rd_button_2) {
 		   cellArray[1][c-1] == cellArray[2][c-1]  && 
 		   cellArray[0][c-1] != "")
 		{
-			win_popup.innerHTML = cellArray[0][c-1] + " won in column " + c;
-			win_popup.style.display = "block";
+			changeBgClr();
 		}
 	}
 
@@ -75,8 +84,7 @@ function identifyWin(rd_button_1, rd_button_2) {
 		   cellArray[r-1][1] == cellArray[r-1][2]  && 
 		   cellArray[r-1][0] != "")
 		{
-			win_popup.innerHTML = cellArray[r-1][0] + " won in row " + r;
-			win_popup.style.display = "block";
+			changeBgClr();
 		}
 	}
 }
